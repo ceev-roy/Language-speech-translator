@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Language Translator | VishCeev</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <div class="translator">
+    <h1><span>Language</span> Translator</h1>
+
+    <!-- Input / Output -->
+    <div class="text-boxes">
+      <!-- Input box -->
+      <div class="output-box">
+        <textarea spellcheck="false" class="from-text" placeholder="Enter text..."></textarea>
+        <div class="action-btns">
+          <button class="btn-icon"><i class="fas fa-copy" data-type="from"></i></button>
+          <button class="btn-icon"><i class="fas fa-volume-up" data-type="from"></i></button>
+        </div>
+      </div>
+
+      <!-- Output box -->
+      <div class="output-box">
+        <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation will appear here..."></textarea>
+        <div class="action-btns">
+          <button class="btn-icon"><i class="fas fa-copy" data-type="to"></i></button>
+          <button class="btn-icon"><i class="fas fa-volume-up" data-type="to"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="options">
+      <div class="select-box">
+        <select id="from-lang"></select>
+      </div>
+      <button class="swap"><i class="fas fa-exchange-alt"></i></button>
+      <div class="select-box">
+        <select id="to-lang"></select>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-group">
+      <button id="start" class="btn green"><i class="fas fa-microphone"></i> Start</button>
+      <button id="stop" class="btn red"><i class="fas fa-stop"></i> Stop</button>
+      <button id="translate" class="btn blue"><i class="fas fa-language"></i> Translate</button>
+    </div>
+  </div>
+
+  <script src="js/countries.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
